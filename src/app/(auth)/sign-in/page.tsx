@@ -1,8 +1,6 @@
-import { Button } from '@/app/components/button'
-import { Input } from '@/app/components/input'
-import { Label } from '@/app/components/label'
 import { ArrowLeftIcon, LogInIcon } from 'lucide-react'
 import Link from 'next/link'
+import { SignInForm } from './sign-in-form'
 
 export default function SignInPage() {
 	return (
@@ -26,31 +24,7 @@ export default function SignInPage() {
 				</p>
 			</header>
 
-			<form className="space-y-4" action="/sign-in" method="POST">
-				<div className="flex flex-col gap-1">
-					<Label htmlFor="email">E-mail</Label>
-
-					<Input
-						type="text"
-						name="email"
-						id="email"
-						placeholder="fulano@gmail.com"
-					/>
-				</div>
-
-				<div className="flex flex-col gap-1">
-					<Label htmlFor="password">Senha</Label>
-
-					<Input
-						type="password"
-						name="password"
-						id="password"
-						placeholder="********"
-					/>
-				</div>
-
-				<Button type="submit">Entrar</Button>
-			</form>
+			<SignInForm />
 		</div>
 	)
 }
