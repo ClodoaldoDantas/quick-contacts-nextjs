@@ -71,7 +71,9 @@ export default function SignUpPage() {
 					/>
 				</div>
 
-				<Button type="submit">Criar conta</Button>
+				<Button className="w-full" type="submit">
+					Criar conta
+				</Button>
 			</form>
 		</div>
 	)

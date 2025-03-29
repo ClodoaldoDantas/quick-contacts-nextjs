@@ -3,7 +3,7 @@ import type { ReactNode } from 'react'
 import { type VariantProps, tv } from 'tailwind-variants'
 
 const anchorVariants = tv({
-	base: 'px-4 py-2 rounded text-lg flex items-center gap-2',
+	base: 'px-4 py-2 rounded flex items-center gap-2',
 	variants: {
 		variant: {
 			primary: 'text-white bg-blue-600 hover:bg-blue-500',

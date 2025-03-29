@@ -67,7 +67,9 @@ export function SignInForm() {
 				<ErrorMessage error={errors.password} />
 			</div>
 
-			<Button type="submit">Entrar</Button>
+			<Button className="w-full" type="submit">
+				Entrar
+			</Button>
 		</form>
 	)
 }
