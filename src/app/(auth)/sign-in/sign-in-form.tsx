@@ -8,7 +8,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import { toast } from 'sonner'
 import { z } from 'zod'
-import { login } from '../actions'
+import { signIn } from '../actions'
 
 const signInFormSchema = z.object({
 	email: z.string().email('Informe um e-mail válido'),
@@ -27,7 +27,7 @@ export function SignInForm() {
 	})
 
 	async function handleSignIn(data: SignInFormData) {
-		const response = await login(data)
+		const response = await signIn(data)
 
 		if (!response.success) {
 			toast.error(response.message)

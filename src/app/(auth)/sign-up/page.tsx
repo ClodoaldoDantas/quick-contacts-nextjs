@@ -1,8 +1,6 @@
-import { Button } from '@/app/components/button'
-import { Input } from '@/app/components/input'
-import { Label } from '@/app/components/label'
 import { ArrowLeftIcon, UserRoundPlusIcon } from 'lucide-react'
 import Link from 'next/link'
+import { SignUpForm } from './sign-up-form'
 
 export default function SignUpPage() {
 	return (
@@ -26,55 +24,7 @@ export default function SignUpPage() {
 				</p>
 			</header>
 
-			<form className="space-y-4" action="/sign-in" method="POST">
-				<div className="flex flex-col gap-1">
-					<Label htmlFor="name">Nome</Label>
-
-					<Input
-						type="text"
-						name="name"
-						id="name"
-						placeholder="Fulano da Silva"
-					/>
-				</div>
-
-				<div className="flex flex-col gap-1">
-					<Label htmlFor="email">E-mail</Label>
-
-					<Input
-						type="text"
-						name="email"
-						id="email"
-						placeholder="fulano@gmail.com"
-					/>
-				</div>
-
-				<div className="flex flex-col gap-1">
-					<Label htmlFor="password">Senha</Label>
-
-					<Input
-						type="password"
-						name="password"
-						id="password"
-						placeholder="********"
-					/>
-				</div>
-
-				<div className="flex flex-col gap-1">
-					<Label htmlFor="password_confirmation">Confirmar Senha</Label>
-
-					<Input
-						type="password"
-						name="password_confirmation"
-						id="password_confirmation"
-						placeholder="********"
-					/>
-				</div>
-
-				<Button className="w-full" type="submit">
-					Criar conta
-				</Button>
-			</form>
+			<SignUpForm />
 		</div>
 	)
 }
