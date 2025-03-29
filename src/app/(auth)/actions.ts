@@ -1,5 +1,6 @@
 'use server'
 
+import { createSession, deleteSession } from '@/lib/session'
 import { redirect } from 'next/navigation'
 
 const user = {
@@ -20,5 +21,16 @@ export async function login({
 		}
 	}
 
+	await createSession({
+		userId: user.id,
+		email: user.email,
+		name: user.name,
+	})
+
 	redirect('/contacts')
+}
+
+export async function logout() {
+	await deleteSession()
+	redirect('/sign-in')
 }
