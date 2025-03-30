@@ -22,3 +22,29 @@ export async function getContacts() {
 
 	return contacts
 }
+
+export async function createContact(payload: {
+	name: string
+	email: string
+	phone: string
+}) {
+	const session = await getSession()
+
+	if (!session) {
+		redirect('/sign-in')
+	}
+
+	await prisma.contact.create({
+		data: {
+			name: payload.name,
+			email: payload.email,
+			phone: payload.phone,
+			userId: session.userId,
+		},
+	})
+
+	return {
+		success: true,
+		message: 'Contato criado com sucesso!',
+	}
+}

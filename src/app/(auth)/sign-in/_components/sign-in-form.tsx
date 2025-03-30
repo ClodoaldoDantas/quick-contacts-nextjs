@@ -38,7 +38,6 @@ export function SignInForm() {
 		<form
 			onSubmit={handleSubmit(handleSignIn)}
 			className="space-y-4"
-			action="/sign-in"
 			method="POST"
 		>
 			<div className="flex flex-col gap-1">
