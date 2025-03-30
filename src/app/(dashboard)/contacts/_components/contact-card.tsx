@@ -1,9 +1,11 @@
 import { getInitials } from '@/utils/get-initials'
 import { removeMask } from '@/utils/remove-mask'
-import { MailIcon, PhoneIcon, TrashIcon } from 'lucide-react'
+import { MailIcon, PhoneIcon } from 'lucide-react'
+import { DeleteContactButton } from './delete-contact-button'
 
 type ContactCardProps = {
 	data: {
+		id: string
 		name: string
 		email: string
 		phone: string
@@ -43,13 +45,7 @@ export function ContactCard({ data }: ContactCardProps) {
 				</div>
 			</div>
 
-			<button
-				aria-label="Remover contato"
-				className="size-10 flex items-center justify-center cursor-pointer hover:text-red-500 absolute top-1 right-1"
-				type="submit"
-			>
-				<TrashIcon size={20} />
-			</button>
+			<DeleteContactButton contactId={data.id} />
 		</div>
 	)
 }
