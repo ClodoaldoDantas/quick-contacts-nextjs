@@ -1,5 +1,8 @@
 # ☎️ Quick Contacts
 
+![image](https://github.com/user-attachments/assets/e6a0c929-d24c-4fac-a0aa-ac5edbce7328)
+
+
 Uma aplicação simples para gerenciamento de contatos desenvolvida com Next JS (App Router), Tailwind CSS e Typescript.
 
 ## 🚀 Tecnologias
