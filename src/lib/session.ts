@@ -54,6 +54,10 @@ export async function getSession() {
 	const cookie = (await cookies()).get('session')?.value
 	const session = await decrypt(cookie)
 
+	if (!session) {
+		return null
+	}
+
 	return session as SessionPayload
 }
 
