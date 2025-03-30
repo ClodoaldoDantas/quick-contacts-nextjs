@@ -2,8 +2,8 @@ import { Alert } from '@/app/components/alert'
 import { Anchor } from '@/app/components/anchor'
 import { getSession } from '@/lib/session'
 import { ContactRoundIcon } from 'lucide-react'
-import { ContactCard } from './contact-card'
-import { SignOutButton } from './sign-out-button'
+import { ContactCard } from './_components/contact-card'
+import { SignOutButton } from './_components/sign-out-button'
 
 export default async function ContactsPage() {
 	const session = await getSession()

@@ -8,7 +8,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import { toast } from 'sonner'
 import { z } from 'zod'
-import { signIn } from '../actions'
+import { signIn } from '../../actions'
 
 const signInFormSchema = z.object({
 	email: z.string().email('Informe um e-mail válido'),
